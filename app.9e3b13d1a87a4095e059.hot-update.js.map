@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/app/header/header.component.html"],"names":[],"mappings":";;;;;;;;;;AAAA;AAAe,sIAAuE,E","file":"app.9e3b13d1a87a4095e059.hot-update.js","sourcesContent":["export default \"<div class=\\\"header\\\">\\n    <h1>This will be a portfolio</h1>\\n</div>\";"],"sourceRoot":""}
