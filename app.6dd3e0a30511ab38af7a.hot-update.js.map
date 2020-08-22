@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/app/header/header.component.html"],"names":[],"mappings":";;;;;;;;;;AAAA;AAAe,oGAAqC,E","file":"app.6dd3e0a30511ab38af7a.hot-update.js","sourcesContent":["export default \"<h1 class=\\\"header\\\">Something</h1>\";"],"sourceRoot":""}
