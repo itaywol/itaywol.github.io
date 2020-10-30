@@ -1,0 +1,63 @@
+body {
+  margin: 6% 10% 0 10%;
+  overflow: hidden;
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+main {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  line-height: 170%;
+  transform: translate(-50%, -50%);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+.fade-in-slow {
+  opacity: 0;
+  animation: fadeIn ease-in 1;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+a {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 3px;
+  font-family: "Source Code Pro", monospace;
+}
+
+a:hover {
+  transition: all 0.2s ease-in-out;
+  color: black;
+  box-shadow: 10px 10px 50px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    line-height: 240%;
+  }
+}

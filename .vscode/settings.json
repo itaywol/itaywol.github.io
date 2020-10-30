@@ -2,5 +2,6 @@
     "files.exclude": {
         "**/dist": true,
         "**/node_modules": true
-    }
+    },
+    "liveServer.settings.multiRootWorkspaceName": "itaywol.github.io"
 }
