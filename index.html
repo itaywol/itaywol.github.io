@@ -3,40 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Itay Wolfish Web and Software Developer personal website, aka itaywol web developer"
+    />
     <meta property="og:title" content="Itay Wolfish" />
     <meta property="og:type" content="personal.site" />
     <meta property="og:url" content="https://itaywol.com" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Itay Wolfish web Developer" />
-    <title>Itay Wolfish web Developer</title>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Itaywol Dev" />
+    <title>Itay Wolfish web Developer - Home</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito|Source+Code+Pro"
-      rel="stylesheet"
-    />
+    <link rel="cannonical" href="https://itaywol.com/" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <script
+      async
+      src="https://unpkg.com/pwacompat"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./scripts/main.js" async></script>
   </head>
   <body>
     <main class="fade-in">
       <h1>Hello (●'◡'●) I'm Itay Wolfish.</h1>
       <h2>Software Developer</h2>
       <span
-        >Currently working at <a href="https://www.linnovate.net">Linnovate</a></span
+        >Currently working at
+        <a href="https://www.linnovate.net">Linnovate</a></span
       >
       <article>
         You can find me on
         <a href="https://www.linkedin.com/in/itaywolfish/">LinkedIn</a>,
         <a href="https://github.com/itaywol">GitHub</a> and sometimes posting on
-        <a href="https://dev.to/itaywol">Dev.to.</a>
-      </article>
-      <article>
-        You can find my posts at my <a href="https://blog.itaywol.com/">blog</a>.
+        <a href="https://blog.itaywol.com/">my blog</a>
       </article>
       <address>
         Feel free to <a href="mailto:wo.itay@gmail.com">Email me.</a>
       </address>
+      <button id="install-pwa" class="fade-in-slow">
+        Add me to your Homepage!
+      </button>
       <br />
-      <p>Have a nice day 👋</p>
+      <p id="greeting-message" class="fade-in-slow">Have a nice day 👋</p>
     </main>
   </body>
 </html>

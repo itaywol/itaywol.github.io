@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Source+Code+Pro&display=swap");
+
 body {
   margin: 6% 10% 0 10%;
   font-family: "Nunito", sans-serif;
+  font-style: normal;
   font-size: 2em;
   font-weight: normal;
 }
@@ -13,6 +16,31 @@ main {
   left: 50%;
   line-height: 240%;
   transform: translate(-50%, -50%);
+}
+main #install-pwa {
+  height: 75px;
+  padding: 25px;
+  margin-top: 30px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Nunito";
+  font-size: medium;
+  outline: none;
+  display: none;
+}
+
+main #install-pwa:hover {
+  transition: all 0.2s ease-in-out;
+  margin-top: 25px;
+  margin-left: 5px;
+  box-shadow: 10px 10px 50px 2px rgba(0, 0, 0, 0.3);
+}
+main #install-pwa:active {
+  transition: all 0.2s ease-in-out;
+  border-color:white;
+  background-color:black;
+  color:white;
 }
 
 .fade-in {
