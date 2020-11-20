@@ -22,7 +22,7 @@ self.addEventListener("install", (event) => {
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       await Promise.all(OFFLINE_URLS.map(OFFLINE_URL => {
-        await cache.add(new Request(OFFLINE_URL, { cache: "reload" }))
+        cache.add(new Request(OFFLINE_URL, { cache: "reload" }))
       }))
     })()
   );
