@@ -20,9 +20,9 @@ const OFFLINE_URLS = ["/","/scripts/main.js","/styles/style.css"];
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
-      const cache = await caches.open(CACHE_NAME);
+      const cache = await caches.open(CACHE_NAME)
       await Promise.all(OFFLINE_URLS.map(OFFLINE_URL=>{
-        await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
+        await cache.add(new Request(OFFLINE_URL, { cache: "reload" }))
       }))
     })()
   );
