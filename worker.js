@@ -15,13 +15,15 @@ Copyright 2015, 2019, 2020 Google LLC. All Rights Reserved.
 // previously cached resources to be updated from the network.
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = "offline";
-const OFFLINE_URL = "/";
+const OFFLINE_URLS = ["/","/scripts/main.js","/styles/style.css"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
-      await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
+      await Promise.all(OFFLINE_URLS.map(OFFLINE_URL=>{
+        await cache.add(new Request(OFFLINE_URL, { cache: "reload" }));
+      }))
     })()
   );
   self.skipWaiting();
@@ -54,7 +56,8 @@ self.addEventListener("fetch", (event) => {
           console.log("Fetch failed; returning offline page instead.", error);
 
           const cache = await caches.open(CACHE_NAME);
-          const cachedResponse = await cache.match(OFFLINE_URL);
+          let cachedResponse
+          await Promise.all(OFFLINE_URLS.map(OFFLINE_URL=>{cachedResponse = await cache.match(OFFLINE_URL)}));
           return cachedResponse;
         }
       })()
