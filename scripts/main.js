@@ -1,6 +1,14 @@
 // INTSALLATION
 
 let installButton = document.getElementById("install-pwa");
+let greetingsMessage = document.getElementById("greeting-message");
+let defaultMessage = greetingsMessage.innerText;
+const pwaInstalled = " And thanks for having me on your device 😊";
+
+function updateGreeting() {
+  greetingsMessage.innerText = defaultMessage + pwaInstalled;
+}
+
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   let deferredPrompt = e;
@@ -12,13 +20,15 @@ window.addEventListener("beforeinstallprompt", (e) => {
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choice) => {
       if (choice.outcome === "accpeted") {
-        console.log("success");
-      } else {
-        console.log("nope");
+        greetingsMessage.innerText = defaultMessage + pwaInstalled;
       }
       deferredPrompt = null;
     });
   });
+});
+
+window.addEventListener("appinstalled", (e) => {
+  updateGreeting();
 });
 
 // END INSTALLATION
